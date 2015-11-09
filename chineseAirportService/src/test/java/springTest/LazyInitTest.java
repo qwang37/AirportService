@@ -1,6 +1,6 @@
 package springTest;
 
-public class LazyLoad {
+public class LazyInitTest {
 	ReferencedObjectTest reference;
 
 	public ReferencedObjectTest getReference() {

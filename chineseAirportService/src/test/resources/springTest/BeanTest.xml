@@ -16,11 +16,11 @@
 		<property name="name" value="referencedOjbect" />
 	</bean>
 	
-	<bean id="singletoneObject" class="springTest.SingletoneObject">
+	<bean id="singletoneObject" class="springTest.SingletoneObjectTest">
 		<property name="name" value="singletone" />
 	</bean>
 	
-	<bean id="prototypeObject" class="springTest.PrototypeObject" scope="prototype">
+	<bean id="prototypeObject" class="springTest.PrototypeScopeTest" scope="prototype">
 		<property name="name" value="prototype" />
 	</bean>
 	
@@ -28,7 +28,7 @@
 		<property name="testObject"  ref="referencedObject"/>
 	</bean>
 	
-	<bean id="constructorInjection" class="springTest.Constructor">
+	<bean id="constructorInjection" class="springTest.ConstructorArgTest">
 		<constructor-arg ref="referencedObject"/>
 	</bean>
 

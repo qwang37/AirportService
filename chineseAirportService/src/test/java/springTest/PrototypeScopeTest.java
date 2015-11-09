@@ -1,8 +1,7 @@
 package springTest;
 
-public class SingletoneObject {
-	public String name;
-
+public class PrototypeScopeTest {
+	String name;
 	public String getName() {
 		return name;
 	}
@@ -10,5 +9,4 @@ public class SingletoneObject {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }

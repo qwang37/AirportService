@@ -31,9 +31,9 @@ public class SpringFrameworkTest {
 	public void testBeanSingletonScope(){
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"springTest/BeanTest.xml");
-		SingletoneObject singletonObject1 = (SingletoneObject)context.getBean("singletoneObject");
+		SingletoneObjectTest singletonObject1 = (SingletoneObjectTest)context.getBean("singletoneObject");
 		singletonObject1.name = "single1";
-		SingletoneObject singletonObject2 = (SingletoneObject)context.getBean("singletoneObject");
+		SingletoneObjectTest singletonObject2 = (SingletoneObjectTest)context.getBean("singletoneObject");
 		singletonObject2.name = "single2";
 		assertEquals(singletonObject1.name, "single2");
 	}
@@ -42,9 +42,9 @@ public class SpringFrameworkTest {
 	public void testBeanPrototypeScope(){
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"springTest/BeanTest.xml");
-		PrototypeObject prototypeObject1 = (PrototypeObject)context.getBean("prototypeObject");
+		PrototypeScopeTest prototypeObject1 = (PrototypeScopeTest)context.getBean("prototypeObject");
 		prototypeObject1.name = "p1";
-		PrototypeObject prototypeObject2 = (PrototypeObject)context.getBean("prototypeObject");
+		PrototypeScopeTest prototypeObject2 = (PrototypeScopeTest)context.getBean("prototypeObject");
 		prototypeObject2.name = "p2";
 		assertEquals(prototypeObject1.name, "p1");
 	}
@@ -60,7 +60,7 @@ public class SpringFrameworkTest {
 	public void testBeanConstructorInjection(){
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"springTest/BeanTest.xml");
-		Constructor constructor = (Constructor)context.getBean("constructorInjection");
+		ConstructorArgTest constructor = (ConstructorArgTest)context.getBean("constructorInjection");
 		assertEquals(constructor.name, (ReferencedObjectTest)context.getBean("referencedObject"));
 	}
 	
