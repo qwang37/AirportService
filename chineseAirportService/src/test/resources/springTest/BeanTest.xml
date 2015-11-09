@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="testDataModel" class="springTest.SpringDataModelTest">
+		<property name="testString" value="stringWorks" />
+		<property name="testInt" value="12345" />
+		<property name="testDouble" value="12.345" />
+		<property name="testObject" ref="referencedObject" />
+	</bean>
+
+	<bean id="referencedObject" class="springTest.ReferencedObjectTest">
+		<property name="name" value="referencedOjbect" />
+	</bean>
+	
+	<bean id="singletoneObject" class="springTest.SingletoneObject">
+		<property name="name" value="singletone" />
+	</bean>
+	
+	<bean id="prototypeObject" class="springTest.PrototypeObject" scope="prototype">
+		<property name="name" value="prototype" />
+	</bean>
+	
+	<bean id="lazyload" class="springTest.notExistClass" lazy-init="true">
+		<property name="testObject"  ref="referencedObject"/>
+	</bean>
+	
+	<bean id="constructorInjection" class="springTest.Constructor">
+		<constructor-arg ref="referencedObject"/>
+	</bean>
+
+</beans>
