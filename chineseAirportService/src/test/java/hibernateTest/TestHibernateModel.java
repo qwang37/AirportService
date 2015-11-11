@@ -3,7 +3,7 @@ package hibernateTest;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+@Entity (name="hello")
 public class TestHibernateModel {
 	@Id
 	int testInt;

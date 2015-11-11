@@ -11,12 +11,11 @@ public class hibernateTest {
 	@Test
 	public void setFunctionTest(){
 		TestHibernateModel testModel = new TestHibernateModel();
-		testModel.setTestInt(1);
+		testModel.setTestInt(2);//primary key, make sure no duplicate
 		testModel.setTestString("first Name");
 		
 		SessionFactory sessionFactory = new AnnotationConfiguration().configure()
 				.buildSessionFactory();
-		
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 		session.save(testModel);

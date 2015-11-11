@@ -148,12 +148,6 @@
 				<version>2.2</version>
 				
 				<configuration>
-					<components>
-						<component>
-							<name>hbm2ddl</name>
-							<implementation>jpaconfiguration</implementation>
-						</component>
-					</components>
 					<componentProperties>
 						<persistenceunit>exampleHibernateJPA</persistenceunit>
 						<outputfilename>schema.ddl</outputfilename>

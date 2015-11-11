@@ -9,7 +9,7 @@
 	    <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 	    <property name="connection.driver_class">org.postgresql.Driver</property>
 	    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
-	    <property name="connection.username">root</property>
+	    <property name="connection.username">postgres</property>
 	    <property name="connection.password">13801987</property>
 	    <!-- JDBC connection pool -->
 	    <property name="connection.pool_size">1</property>
@@ -21,7 +21,7 @@
 	    <property name="show_sql">true</property>
 	    
 	    <!-- Drop and re-create database schema on startup -->
-	    <property name="hbm2ddl.auto">true</property>
+	    <property name="hbm2ddl.auto">update</property>
 	    
 	    <!-- Names the annotated entity class -->
 	    <mapping class="hibernateTest.TestHibernateModel"></mapping>
