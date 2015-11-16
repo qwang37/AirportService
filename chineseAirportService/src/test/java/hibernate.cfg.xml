@@ -21,9 +21,10 @@
 	    <property name="show_sql">true</property>
 	    
 	    <!-- Drop and re-create database schema on startup -->
-	    <property name="hbm2ddl.auto">update</property>
+	    <property name="hbm2ddl.auto">create</property>
 	    
 	    <!-- Names the annotated entity class -->
-	    <mapping class="hibernateTest.TestHibernateModel"></mapping>
+	   	<mapping class="entityModel.PassengerAddress"></mapping>
+	    <mapping class="entityModel.Passenger"></mapping>
   	</session-factory>
 </hibernate-configuration>
